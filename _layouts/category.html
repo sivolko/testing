@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  <!-- Preloader-->
+  <div class="preloader" id="preloader">
+    <div class="spinner-grow text-secondary" role="status">
+      <div class="sr-only">Loading...</div>
+    </div>
+  </div>
+
+  <!-- Header Area-->
+  <div class="header-area" id="headerArea">
+    <div class="container h-100 d-flex align-items-center justify-content-between">
+      <!-- Back Button-->
+      <div class="back-button">
+        <a href="index.html">
+          <i class="lni lni-chevron-left"></i>
+        </a>
+      </div>
+
+      <!-- Page Title-->
+      <div class="page-heading">
+        <h6 class="mb-0">Catagory</h6>
+      </div>
+
+      <!-- Search Form-->
+      <div class="search-form">
+        <a href="search.html">
+          <i class="fa fa-search"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content-wrapper">
+    <!-- Top Catagories Wrapper-->
+   {{ content }}
+
+    <!-- All Catagory Wrapper-->
+    <div class="all-catagory-wrapper">
+      <div class="container">
+        <h5 class="mb-3 newsten-title">All Catagory</h5>
+      </div>
+
+     {% include all-cat.html %} 
+    </div>
+  </div>
+
+  <!-- Footer Nav -->
+  {% include footer.html %}
+
+  <!-- All JavaScript Files-->
+ {% include js.html %}
+</body>
+
+
+</html>

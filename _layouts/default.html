@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  <!-- Preloader-->
+  <div class="preloader" id="preloader">
+    <div class="spinner-grow text-secondary" role="status">
+      <div class="sr-only">Loading...</div>
+    </div>
+  </div>
+
+  <!-- Header Area-->
+  {% include header.html %}
+
+  <!-- Sidenav Black Overlay-->
+  <div class="sidenav-black-overlay"></div>
+
+  <!-- Side Nav Wrapper-->
+  {% include sidebar.html %}
+  {% include home.html %}
+
+  <!-- Footer Nav -->
+  {% include footer.html %}
+
+  <!-- All JavaScript Files-->
+ {% include js.html %}
+</body>
+</html>

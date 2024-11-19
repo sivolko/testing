@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+  <!-- Preloader-->
+  {% include preloader.html %}
+
+  <!-- Header Area-->
+  {% include header-tabs.html %}
+
+  <!-- Center Modal-->
+  <div class="modal fade post-share-modal" id="postShareModal" tabindex="-1" role="dialog" aria-labelledby=""
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button class="close close" type="button" data-dismiss="modal" aria-label="Close">
+            <i class="lni lni-close"></i>
+          </button>
+
+          <!-- Heading-->
+          <h6 class="mb-3 pl-2">Share this post</h6>
+          <div class="social-share-btn d-flex align-items-center flex-wrap">
+            <a class="btn-facebook" href="#"><i class="lni lni-facebook"></i></a>
+            <a class="btn-twitter" href="#"><i class="lni lni-twitter-original"></i></a>
+            <a class="btn-instagram" href="#"><i class="lni lni-instagram"></i></a>
+            <a class="btn-whatsapp" href="#"><i class="lni lni-whatsapp"></i></a>
+            <a class="btn-linkedin" href="#"><i class="lni lni-linkedin"></i></a>
+            <a class="btn-tumblr" href="#"><i class="lni lni-tumblr"></i></a>
+            <a class="btn-quora" href="#"><i class="lni lni-quora"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content-wrapper">
+    <!-- Scroll Indicator-->
+    <div id="scrollIndicator"></div>
+
+    <!-- Single Blog Thumbnail-->
+    <div class="single-blog-thumbnail">
+      <img class="w-100" src="{{ page.image }} alt="">
+      <a class="post-bookmark" href="#">
+        <i class="lni lni-bookmark"></i>
+      </a>
+    </div>
+
+    <!-- Single Blog Info-->
+    <div class="single-blog-info">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <!-- Post Like Wrap-->
+          <div class="post-like-wrap">
+            <!-- Favourite Post-->
+            <a class="post-love d-block" href="#">
+              <i class="lni lni-heart"></i>
+            </a>
+            <span class="d-block">368 Likes</span>
+            <div class="line"></div>
+            <!-- Share Post-->
+            <a class="post-share" href="#" data-toggle="modal" data-target="#postShareModal"><i
+                class="fa fa-share-alt"></i></a>
+            <span class="d-block">1,028</span>
+          </div>
+          <!-- Post Content Wrap-->
+          <div class="post-content-wrap">
+            <a class="post-catagory d-inline-block mb-2" href="#">Fashion</a>
+            <h5 class="mb-2">Jellyfish don't have brains. They don't have a heart, lungs!</h5>
+            <div class="post-meta">
+              <a class="post-date" href="#">23 March</a>
+              <a class="post-views" href="#">9,451
+                Views</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Description-->
+  {{ content }}
+
+    <!-- Post Author-->
+   {% include author.html %}
+
+    <!-- Related Post-->
+    <div class="related-post-wrapper">
+      <div class="container">
+        <h6 class="mb-3 newsten-title">Related Posts</h6>
+      </div>
+
+      <div class="container">
+        <!-- Single Trending Post-->
+        <div class="single-trending-post d-flex">
+          <div class="post-thumbnail">
+            <img src="img/bg-img/11.jpg" alt="">
+          </div>
+          <div class="post-content">
+            <a class="post-title" href="single.html">Swimming is a good exercise for the
+              body</a>
+            <div class="post-meta d-flex align-items-center">
+              <a href="catagory.html">Sports</a>
+              <a href="#">02 Jun 22</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Trending Post-->
+        <div class="single-trending-post d-flex">
+          <div class="post-thumbnail">
+            <div class="video-icon">
+              <i class="lni lni-play"></i>
+            </div>
+            <img src="img/bg-img/16.jpg" alt="">
+          </div>
+          <div class="post-content">
+            <a class="post-title" href="single.html">The drone is banned in BD without
+              permission</a>
+            <div class="post-meta d-flex align-items-center">
+              <a href="catagory.html">Tech</a>
+              <a href="#">03 Jun 22</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Trending Post-->
+        <div class="single-trending-post d-flex">
+          <div class="post-thumbnail">
+            <img src="img/bg-img/17.jpg" alt="">
+          </div>
+          <div class="post-content">
+            <a class="post-title" href="single.html">Some tips for taking care of the body this
+              summer</a>
+            <div class="post-meta d-flex align-items-center">
+              <a href="catagory.html">Fashion</a>
+              <a href="#">04 Jun 22</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="border-top"></div>
+    </div>
+
+    <!-- Blog Comments below -->
+   
+  </div>
+
+  <!-- Footer Nav -->
+  {% include footer.html %}
+  <!-- All JavaScript Files-->
+{% include js.html %}
+</body>
+</html>

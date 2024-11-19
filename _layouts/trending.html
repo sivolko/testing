@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+{% include head.html %}
+
+<body>
+  <!-- Preloader-->
+   {% include preloader.html %}
+
+  <!-- Header Area-->
+{% include header-tabs.html %}
+
+  <div class="page-content-wrapper">
+    <!-- Trending News Wrapper-->
+    <div class="trending-news-wrapper">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <h5 class="mb-3 newsten-title">Trending</h5>
+          <p class="mb-3 line-height-1">9 Posts</p>
+        </div>
+      </div>
+
+     {% include single-trend-post.html %}
+
+
+      <!-- <div class="container">
+        <div class="text-center mt-3">
+          <a class="btn btn-primary" href="#">Load More</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Footer Nav -->
+  {% include footer.html %}
+
+  <!-- All JavaScript Files-->
+ {% include js.html %}
+</body>
+</html>
